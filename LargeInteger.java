@@ -82,12 +82,8 @@ public class LargeInteger {
 	 * in this case, set number to "0", negative to false
 	 */
 	public boolean setNumber(String n) {
-		boolean nFlag = false; //assumes number is positive
-		if( n != null && !n.isEmpty()){
-	 	}
-		
 		number = "0"; 
-		return flag; //to be completed
+		return false; //to be completed
 	}
 	
 
