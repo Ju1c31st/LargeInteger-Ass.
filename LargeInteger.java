@@ -45,9 +45,24 @@ public class LargeInteger {
 	 * "7987"
 	 * "00000423"
 	 * "-053"
+	 * My notes: 
+	 * nonInt is counting the non-ints like "+2" "-2"  are valid.
+	 * whereas "+++---2" is not valid
 	 */
 	public static boolean isInteger(String n) {
-		return false; //to be completed
+		public static boolean isInteger(String n) {	
+		int nonInt = 0;
+		  if (n != null && !n.isEmpty()) {
+		        for (char c : n.toCharArray()) {
+		            if (Character.isDigit(c) && nonInt < 2 ) {
+		                return true;
+		            } else{
+		            	 nonInt++;
+		            }
+		        }
+		    }
+		    return false; //passes test
+		}
 	}
 
 	/**
