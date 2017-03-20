@@ -4,12 +4,22 @@ public class LargeInteger {
 
 	/**
 	 * DO NOT MODIFY
+	 * (!!!?assumed the above was a typo?!!!)
 	 * @param s: assumed to be a valid integer stored in a string
 	 * @return the number without leading zeroes (zeroes at the front)
 	 */
 	public static String getWithoutLeadingZeroes(String s) {
-		return ""; //to be completed
-	}
+		//if(s != null && !s.isEmpty()){
+
+
+			//for(int i=0; i<s.length(); i++){
+				//if(s.charAt(i) == 0){
+					return s.replaceAll("^0+",""); 
+				}
+			//}
+		//}
+		//return ""; //to be completed 
+	//}
 
 	/**
 	 * DO NOT MODIFY
@@ -45,24 +55,20 @@ public class LargeInteger {
 	 * "7987"
 	 * "00000423"
 	 * "-053"
-	 * My notes: 
-	 * nonInt is counting the non-ints like "+2" "-2"  are valid.
-	 * whereas "+++---2" is not valid
+	 * "a23" (what about this possibility?)
 	 */
-	public static boolean isInteger(String n) {
-		public static boolean isInteger(String n) {	
+	public static boolean isInteger(String n) {	
 		int nonInt = 0;
-		  if (n != null && !n.isEmpty()) {
-		        for (char c : n.toCharArray()) {
-		            if (Character.isDigit(c) && nonInt < 2 ) {
-		                return true;
-		            } else{
-		            	 nonInt++;
-		            }
-		        }
-		    }
-		    return false; //passes test
+		if (n != null && !n.isEmpty() ) {
+			for (char c : n.toCharArray()) {
+				if (Character.isDigit(c) && nonInt < 2 ) {
+					return true;
+				} else{
+					nonInt++;
+				}
+			}
 		}
+		return false;
 	}
 
 	/**
@@ -80,16 +86,22 @@ public class LargeInteger {
 	 * 
 	 * return false if the parameter is not a valid integer,
 	 * in this case, set number to "0", negative to false
+	 * 
+	 * my notes: 
+	 * if negNum change to posNum and true
+	 * if posNum leave as is and false
+	 * if not valid change num to 0 and false
 	 */
-	public boolean setNumber(String n) {
-		public boolean setNumber(String n) {
+	public boolean setNumber(String s) {
 		boolean nFlag = false; //assumes number is positive
-		if( n != null && !n.isEmpty()){
-	 	}
-		
-		number = "0"; 
-		return flag; //to be completed
-	}
+		if( s != null && !s.isEmpty()){
+			for(int i=0; i<s.length();i++){
+			}
+		}
+		number = "0";
+		return nFlag;
+	} //to be completed
+
 
 	/**
 	 * DO NOT MODIFY
@@ -110,7 +122,7 @@ public class LargeInteger {
 	public LargeInteger(String n) {
 		setNumber(n);
 	}
-	
+
 	/**
 	 * DO NOT MODIFY
 	 * @return
@@ -176,6 +188,7 @@ public class LargeInteger {
 	 * negative of the integer represented by calling object
 	 */
 	public LargeInteger negate() {
+		if()
 		return new LargeInteger("0"); //to be completed
 	}
 
@@ -186,6 +199,7 @@ public class LargeInteger {
 	 * the calling object
 	 */
 	public LargeInteger absolute() {
+
 		return new LargeInteger("0"); //to be completed
 	}
 
@@ -240,6 +254,7 @@ public class LargeInteger {
 	 * and parameter object
 	 */
 	public LargeInteger add(LargeInteger other) {
+
 		return new LargeInteger("0"); //to be completed
 	}
 
